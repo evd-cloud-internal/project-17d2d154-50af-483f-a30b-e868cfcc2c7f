@@ -6,4 +6,13 @@ type: page
 
 # Welcome
 
-This is your new project's homepage. Edit this file to get started.
+{% line_chart
+    data="demo_daily_orders"
+    x="date"
+    y="sum(total_sales)"
+    series="category"
+    y_fmt="usd"
+    date_grain="month"
+    title="Monthly Sales by Category"
+    subtitle="Total sales over time, broken down by product category"
+/%}
